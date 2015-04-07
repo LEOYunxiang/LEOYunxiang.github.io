@@ -22,28 +22,49 @@ try {
 <td id="layout-menu">
 <div class="menu-category">Info</div>
 <div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="CV.html">Curriculum&nbsp;vitae</a></div>
 <div class="menu-item"><a href="news.html">What’s&nbsp;new</a></div>
+<div class="menu-category">Research</div>
 <div class="menu-item"><a href="project.html" class="current">Projects</a></div>
+<div class="menu-item"><a href="talks.html">Talks/Slides</a></div>
 <div class="menu-item"><a href="publication.html">Publications</a></div>
-<div class="menu-item"><a href="publication.html">Talks/Slides</a></div>
 <div class="menu-item"><a href="usefulinfo.html">Useful&nbsp;Info</a></div>
 </td>
 <td id="layout-content">
 <div id="toptitle">
 <h1>Projects</h1>
 </div>
-<h2><a href="project.html">Oversampled Frequency Domain MMSE Equalization for SC-FDMA Communication in Non-Ideal Wireless Channels</a></h2>
-<p><i>Supervised by Prof. GUAN YONG LIANG and Prof. Gang Wu</i></p>
+<h2>Oversampled Frequency Domain MMSE Equalization for SC-FDMA Communication in Non-Ideal Wireless Channels</h2>
+<p><i>Supervised by Prof. YONGLIANG GUAN and Prof. Gang Wu</i></p>
 <p>Single Carrier Frequency Division Multiple Access (SC-FDMA) is an alternative technique which also benefits low signal processing  complexity for multi-path fading, comparing with Orthogonal Frequency Division Multiple Access (OFDMA). </p>
 <p>However, it also suffers greatly from carrier frequency offset (CFO) due to that CFO  destroys the orthogonality among subcarriers. Therefore, BER performance severely degrades by such channel effect. </p>
 <p>Based on frequency domain oversampling and the Bayesian Gauss-Markov theorem, we propose a novel frequency domain oversampling MMSE equalization receiver for SC-FDMA system. Frequency domain oversampling MMSE equalizer greatly improves the BER performance in highly frequency selective channel with or without CFO effect by extracting frequency diversity. As number of channel path drops down to 1, oversampling scheme degenerates to conventional scheme due to there is no frequency diversity. In addition, it is shown that oversampling factor could be no larger than (N-Q+1)/N, where N is the subcarrier number and Q is the number of channel path components.  </p>
-<p><b>Further information shown in my bachelor dissertation</b>:<a href="papers/fyp_report.pdf">SC-FDMA Frequency Domain Oversampling MMSE Equalizer</a>.</p>
-<h2><a href="project.html">USRP-based OFDM Indoor Radar for Doorway Detection</a></h2>
-<p><i>Supervised by Prof. GUAN YONG LIANG and Prof. Dmitriy Garmatyuk</i></p>
-<p>With an advent of high-speed digital converters and processors a new application of microwave technology has emerged: software-defined, multi-functional systems. One such new development is re-use of the same waveform for both radar and communications thus providing for simultaneous operations of communication and sensing. An obvious advantage of this approach is much more effective use of spectral resources when both functionalities need to be present. We propose to apply this approach to indoor mapping with communication-like signaling: specifically, in our current work we perform doorway detection with OFDM waveforms in the unknown environment. The low cost software design radio USRP is implemented as the front end while signal is processed in computer. We use the reflection power comparison detection method and ranging detection method to distinguish the difference between wall and doorway. With the dynamic spectrum assignment and fusion properties of OFDM system the utilized signals can be used not only for sensing, but also for broadcasting the mapping information to nearby systems.</p>
+<p><b>Further information shown in my bachelor dissertation</b>: <a href="papers/fyp_report.pdf">SC-FDMA Frequency Domain Oversampling MMSE Equalizer</a>.</p>
+<h2>USRP-based OFDM Indoor Radar for Doorway Detection</h2>
+<p><i>Supervised by Prof. YONGLIANG GUAN and Prof. Dmitriy Garmatyuk</i></p>
+<p>Radar is an object-detection system that uses radio waves to determine the range and direction of objects. It could be employed on an Unmanned Ground Vehicle (UGV) for autonomous navigation. Although the UGV could sense the surrounding environment by using optical sensors such as camera or infrared sensors, these sensors may not work well in some environments, such as an environment with low visibility or an environment with obstacles made of transparent or polished materials. In these cases, radar sensors could be employed along with these optical sensors to enhance the navigation capability of an UGV.</p>
+<p>To investigate this, a low-cost narrowband radar system based on USRP (Universal Software Radio Peripheral) hardware and C<tt></tt>/MATLAB programming is implemented to enable UGV autonomous indoor navigation. The main purpose is to investigate open doorway detection in an indoor environment utilizing a narrowband radar, which could be used for the UGV to detect the open doorway and navigate itself autonomously through the doorway.</p>
+<p>We first present the design and calibration of a power-based narrowband radar system. It was found that, when the radar faces the wall, the relation between the received power and the distance to the wall follows the free-space path loss equation, rather than the traditional radar equation. This is due to the fact that the wall is too large to be treated as a point scatterer, and is better approximated by an infinite reflecting surface. We also present the design and validation of radar ranging. The radar ranging algorithm was verified in three conditions, 1) using cables (to avoid multipath and self-interference problems), 2) in an anechoic chamber (to avoid multipath) and 3) in a real indoor environment. The test results show that the ranging error is approximately 50cm and the maximum detection range is up to 6 meters.</p>
+<p>To detect an open doorway with an UGV, a ”2-step” doorway detection proce- dure is utilized in this thesis. In the first step (“Step 1”), the nearest wall is detected by using a detection method called Shortest Range Determination (SRD). Then, in the second step (“Step 2”), an open doorway is detected by using the radar and a power-based detection algorithm to scan the space parallel to the nearest wall detected in the first step. This detection algorithm is based on total variation de-noising. It detects an open doorway by detecting the cross-range of the posi- tions of the leftmost and rightmost sides of the open doorway. The experimental results give a detection error of around 30cm. Furthermore, when the robot scans the wall in “Step 2”, the range between the wall and the radar can be measured by using radar ranging process. By averaging all the reliable ranging values, the range between the robot and the wall is estimated to provide extra information of the doorway position. The doorway position coordinate is then built up by com- bining these information including the cross-range and the range of the doorway positions. Our approach to radar-assisted indoor positioning of an UGV is thus validated. Future research on this topic may include exploration of more complex scenarios (e.g. detection of signs of life amid rubble for UGV-based search-and- rescue missions), as well as enhancing the capabilities of the USRP-based system by fusing sensing and communications.</p>
+<p><b>Publications:</b> </p>
+<ol>
+<li><p><b>YunXiang Liu</b>, YongLiang Guan, Dmitriy Garmatyuk, and Francois Quitin. Improved Exit Path Identification with Indoor USRP-based Radar System. In <i>ION PNT 2015, Pacific Positioning, Navigation and Timing Meeting</i>, <b>to appear in ION PNT 2015</b>.<br /></p>
+</li>
+<li><p><b>YunXiang Liu</b>, YongLiang Guan, Dmitriy Garmatyuk, and Jade Morton. <a href="papers/USRPRadar2014Leo.pdf">USRP-based OFDM Radar Systems for Doorway Detection</a>. In <i>Radar Conference</i>, pages 0875-0880. IEEE 2014.<br /></p>
+</li>
+</ol>
+<p><b>Demo:</b></p>
+<ol>
+<li><p><a href="https://www.youtube.com/watch?v=eGwO5oiOoLM">Open Doorway Detection － Step 1 Measurement</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=DeBwyZWRpvw">Open Doorway Detection － Step 2 Measurement</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=CCxIJbK4FFs">Entire Demo － Open Doorway Detection</a></p>
+</li>
+</ol>
 <div id="footer">
 <div id="footer-text">
-Page generated 2014-07-31 00:47:53 CST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2015-04-07 19:30:46 CST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </td>
